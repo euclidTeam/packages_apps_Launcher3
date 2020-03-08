@@ -15,5 +15,10 @@
 -->
 <resources>
     <!-- Application name -->
+
     <string name="euclid_app_name" translatable="false">Geon</string>
+
+    <!-- Folder titles -->
+    <string name="google_folder_title" translatable="false">Google</string>
+
 </resources>
