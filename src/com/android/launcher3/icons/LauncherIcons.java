@@ -76,8 +76,6 @@ public class LauncherIcons extends BaseIconFactory implements AutoCloseable {
     private LauncherIcons next;
 
     private MonochromeIconFactory mMonochromeIconFactory;
-    
-    private boolean isMonochromeIconsEnabled;
 
     private boolean isMonochromeIconsEnabled;
 
