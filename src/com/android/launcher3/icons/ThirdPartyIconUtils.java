@@ -26,11 +26,15 @@ class ThirdPartyIconUtils {
                 return CustomClock.getClock(context, icon, resolver.clockData());
             }
 
-            // Google Clock goes second, but only if the icon pack does not override it.
-            if (icon == null && key.componentName.equals(DynamicClock.DESK_CLOCK)) {
-                return DynamicClock.getClock(context, iconDpi);
-            }
+
+        // Google Clock goes second, but only if the icon pack does not override it.
+        if (icon == null && key.componentName.equals(DynamicClock.DESK_CLOCK)) {
+            String packageName = key.componentName.getPackageName();
+            IconProvider.ThemeData td = IconProvider.INSTANCE.get(context)
+                    .getThemeDataForPackage(packageName);
+            return ClockDrawableWrapper.forPackage(context, packageName, iconDpi, td);
         }
+    }
 
         // Google Calendar is checked last. Only applied if the icon pack does not override it.
         if (icon == null && key.componentName.getPackageName().equals(DynamicCalendar.CALENDAR)) {
