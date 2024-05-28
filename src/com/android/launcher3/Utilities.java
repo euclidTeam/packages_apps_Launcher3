@@ -1019,8 +1019,7 @@ public final class Utilities {
 
     public static int getBlurRadius(Context context) {
         SharedPreferences prefs = LauncherPrefs.getPrefs(context.getApplicationContext());
-        return prefs.getInt(KEY_BLUR_DEPTH,
-                    context.getResources().getInteger(R.integer.max_depth_blur_radius));
+        return prefs.getInt(KEY_BLUR_DEPTH, 75);
     }
 
     public static boolean isShortParallax(Context context) {
