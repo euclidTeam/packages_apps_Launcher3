@@ -41,7 +41,7 @@ import com.android.launcher3.util.UserIconInfo;
 import com.android.quickstep.util.FadeOutRemoteTransition;
 
 import java.util.ArrayList;
-import com.android.internal.voltage.app.ParallelSpaceManager;
+import com.android.internal.euclid.app.ParallelSpaceManager;
 
 import java.util.List;
 import java.util.Map;
